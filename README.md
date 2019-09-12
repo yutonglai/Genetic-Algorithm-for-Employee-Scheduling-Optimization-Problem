@@ -1,7 +1,7 @@
 # Genetic-Algorithm-for-Employee-Scheduling-Optimization-Problem
 An implementation of genetic algorithm on scheduling optimization problem
 
-0. Summary
+A0. Summary
 
 The modeling is part of the StorX AI project. It focuses on store labor scheduling optimization and related tasks.
 
@@ -50,3 +50,31 @@ Limitations:
         5. Ensure that the important/most effective assignee will not have the same day off;(06/19/2019)
 
         6. Consider task amount in promotion days.(06/21/2019)
+        
+        
+Input data:
+
+Date = '2019-07-22T'
+ScheduleCode = pd.read_csv('/home/yutong/Dropbox/Retech Labs/StorX/data/schedule code list & decoded time 20180409 V2.csv')
+TaskTimeFrameDict = {'T1':'08:20-11:45',
+                     'T2':'10:15-12:55',
+                     'T3':'12:30-14:00',
+                     'T4':'17:10-20:30'}
+
+ScheduleCodeDict = ScheduleCode.set_index('Code')['time'].to_dict()
+TaskList = list(TaskTimeFrameDict.keys())
+
+# The first column is time code, the last column is salary
+column       =           ['Code'] +     TaskList    + ['Wage']
+AssigneeDict = {'FA0001':['10K',   2,    3,    4,    5,   191],
+                'FA0002':['10H',   3,    4,    2,    4,   155],
+                'FA0003':['7AE',   2,    2,    4,    6,   172],
+                'FA0004':['7AQ',   2,    5,    2,    3,   162],
+                'FA0005':['7AG',   1,    4,    6,    2,   120],
+                'FA0006':['17B',   2,    2,    4,    4,   169],
+                'PA0001':['5M' ,   2,    2,    2,    6,    69],
+                'PA0002':['6AJ',   3,    4,    1,    5,    59],
+                'PA0003':['6D' ,   5,    3,    2,    2,    72],
+                'PA0004':['7AE',   2,    2,    3,    4,    55],
+                'PA0005':['7AU',   6,    4,    3,    2,    56],
+                'PA0006':['7BS',   2,    2,    2,    3,    45]}
