@@ -1,4 +1,13 @@
-def Productivity(Date, ScheduleCodeDict, column, AssigneeDict)
+import random
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+from datetimerange import DateTimeRange
+from astropy.table import Table
+
+
+def Productivity(Date, ScheduleCodeDict, column, AssigneeDict):
     ###################################################################
     #### Calculate how much time each assignee can spend on a task ####
     AssigneeList = list(AssigneeDict.keys())
