@@ -1,23 +1,23 @@
 # Genetic-Algorithm-for-Employee-Scheduling-Optimization-Problem
 An implementation of genetic algorithm on scheduling optimization problem
 
-A0. Summary
+#### A0. Summary
 
 The modeling is part of the StorX AI project. It focuses on store labor scheduling optimization and related tasks.
 
-A1. Developer info
+#### A1. Developer info
 
 Name: Yutong Lai
 
 Location: San Diego, United State.
 
-Email: yutong@retechlabs.com
+Email: 
 
-A2. Objective
+#### A2. Objective
 
 Develop AI algorithm to Help Wumart store managers determine the optimized labor schedule that can satisfy different applicable assumptions while lowering the labor cost.
 
-A3. Assumptions & Limitations
+#### A3. Assumptions & Limitations
 
 Assumptions:
 
