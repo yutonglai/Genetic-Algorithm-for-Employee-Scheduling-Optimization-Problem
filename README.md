@@ -11,7 +11,7 @@ Name: Yutong Lai
 
 Location: San Diego, United State.
 
-Email: 
+Email: yutong_lai@ecitics.com.cn
 
 #### A2. Objective
 
