@@ -62,4 +62,4 @@ def Productivity(Date, ScheduleCodeDict, column, AssigneeDict):
     # FullTrue: The productivity of all employee to all tasks
     ProTrue = np.array(AssigneePro*IntersectionHour)
     
-    return (ProTrue, Wage)
+    return (ProTrue, AssigneeDF, AssigneeList, Wage)
