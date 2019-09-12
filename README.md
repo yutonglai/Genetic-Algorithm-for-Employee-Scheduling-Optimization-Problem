@@ -95,6 +95,7 @@ from MakeSchedule import OneWeekSchedule
 FullSchedule, DayoffSchedule, TotalCost, TaskCompletion = OneWeekSchedule(ProTrue, AssigneeDF, AssigneeDict, AssigneeList, TaskList, Wage)
 ```
 #### We will get the optimized schedule, day-off schedule, Total cost and how the tasks are completed
+```
 ##### Table 1. An optimized week-schedule
 EmployeeID  |1  |2  |3  |4  |5  |6  |7
 FA0001  |0  |0  |0  |0  |0  |0  |0
@@ -109,3 +110,4 @@ PA0003  |1  |1  |1  |0  |1  |1  |1
 PA0004  |1  |0  |1  |1  |1  |1  |1
 PA0005  |1  |1  |1  |0  |1  |1  |1
 PA0006  |0  |0  |0  |1  |0  |1  |1
+```
