@@ -53,9 +53,12 @@ Limitations:
         
         
 Input data:
-
+```
 Date = '2019-07-22T'
+#### load in working time code
 ScheduleCode = pd.read_csv('/home/yutong/Dropbox/Retech Labs/StorX/data/schedule code list & decoded time 20180409 V2.csv')
+
+#### Task time period
 TaskTimeFrameDict = {'T1':'08:20-11:45',
                      'T2':'10:15-12:55',
                      'T3':'12:30-14:00',
@@ -64,7 +67,7 @@ TaskTimeFrameDict = {'T1':'08:20-11:45',
 ScheduleCodeDict = ScheduleCode.set_index('Code')['time'].to_dict()
 TaskList = list(TaskTimeFrameDict.keys())
 
-# The first column is time code, the last column is salary
+#### The first column is time code, the last column is salary
 column       =           ['Code'] +     TaskList    + ['Wage']
 AssigneeDict = {'FA0001':['10K',   2,    3,    4,    5,   191],
                 'FA0002':['10H',   3,    4,    2,    4,   155],
@@ -78,3 +81,4 @@ AssigneeDict = {'FA0001':['10K',   2,    3,    4,    5,   191],
                 'PA0004':['7AE',   2,    2,    3,    4,    55],
                 'PA0005':['7AU',   6,    4,    3,    2,    56],
                 'PA0006':['7BS',   2,    2,    2,    3,    45]}
+```
