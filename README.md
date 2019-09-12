@@ -52,7 +52,7 @@ Limitations:
         6. Consider task amount in promotion days.(06/21/2019)
         
         
-Input data:
+#### Input data:
 ```
 Date = '2019-07-22T'
 #### load in working time code
@@ -82,3 +82,30 @@ AssigneeDict = {'FA0001':['10K',   2,    3,    4,    5,   191],
                 'PA0005':['7AU',   6,    4,    3,    2,    56],
                 'PA0006':['7BS',   2,    2,    2,    3,    45]}
 ```
+#### Compute the true productivity according to the working time code and task time period
+```
+from productivity import Productivity
+
+ProTrue, AssigneeDF, AssigneeList, Wage = Productivity(Date, ScheduleCodeDict, column, AssigneeDict)
+```
+#### Compute a schedule for a week, assuming weekend's workload is twice more than usual
+```
+from MakeSchedule import OneWeekSchedule
+
+FullSchedule, DayoffSchedule, TotalCost, TaskCompletion = OneWeekSchedule(ProTrue, AssigneeDF, AssigneeDict, AssigneeList, TaskList, Wage)
+```
+#### We will get the optimized schedule, day-off schedule, Total cost and how the tasks are completed
+##### Table 1. An optimized week-schedule
+EmployeeID  |1  |2  |3  |4  |5  |6  |7
+FA0001  |0  |0  |0  |0  |0  |0  |0
+FA0002  |0  |0  |0  |0  |0  |0  |0
+FA0003  |0  |1  |0  |0  |0  |1  |1
+FA0004  |0  |0  |0  |0  |0  |0  |0
+FA0005  |0  |0  |0  |0  |0  |0  |0
+FA0006  |0  |0  |0  |0  |0  |0  |0
+PA0001  |0  |0  |0  |1  |0  |1  |1
+PA0002  |0  |0  |0  |1  |0  |0  |0
+PA0003  |1  |1  |1  |0  |1  |1  |1
+PA0004  |1  |0  |1  |1  |1  |1  |1
+PA0005  |1  |1  |1  |0  |1  |1  |1
+PA0006  |0  |0  |0  |1  |0  |1  |1
