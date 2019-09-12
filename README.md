@@ -98,7 +98,7 @@ FullSchedule, DayoffSchedule, TotalCost, TaskCompletion = OneWeekSchedule(ProTru
 
 
 ##### Table 1. An optimized week-schedule
-EmployeeID  |1  |2  |3  |4  |5  |6  |7
+EmployeeID  |Mon|Tue|Wed|Thu|Fri|Sat|Sun
 -----------:|:-:|:-:|:-:|:-:|:-:|:-:|:-
     FA0001  |0  |0  |0  |0  |0  |0  |0
     FA0002  |0  |0  |0  |0  |0  |0  |0
